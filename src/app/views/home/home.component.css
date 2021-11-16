@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&family=Roboto&display=swap');
+
+/* fontes usadas: 
+font-family: 'Audiowide', cursive; 
+font-family: 'Press Start 2P', cursive;
+font-family: 'Roboto', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner {
+    height: 92%;
+    width: 95% !important;
+    display: flex;
+    border-radius: 10px;
+}
+
+.carousel-item img{filter: brightness(82%)}
+
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  height: 100%;
+  display: flex;
+}
+
+.carousel-caption { display: block !important;}
+
+/* texto do carousel  */
+.carousel-caption h5{
+    font-family: 'Audiowide', cursive;
+    font-size: 200%;
+}
+
+.carousel-caption p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+}
+
+
+/* 
+
+.banner_one{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.banner_two {
+    width: 100%;
+    height: 100%;
+} */
+
+/* .carousel-caption {
+    width: 100%;
+    height: 40%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    border: solid 2px red;
+} */
+
+/* .carousel-item{
+    display: none;
+} */
+
+@media  (max-width: 900px) {
+    .banner { height: 400px;}
+    .carousel-caption h5 {font-size: 150%;}
+    .carousel-caption p {font-size: 150%;}
+}
+
+@media screen and (max-width: 700px) {
+    .banner { height: 300px;}
+    .carousel-caption h5 {font-size: 100%;}
+    .carousel-caption p {font-size: 100%;}
+}
