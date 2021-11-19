@@ -10,12 +10,13 @@ font-family: 'Roboto', sans-serif; */
     padding: 0;
     box-sizing: border-box;
     /* border: solid 1px red; */
+    text-decoration: none;
 }
 
 header {
     height: 190px;
-    background-color: white;
     width: 100%;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,19 +28,25 @@ header {
     background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    font-size: 90%;
 }
 
-.carousel-inner { display: block !important;
+.carousel-inner {
+    display: block !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* slide texto  */
 .carousel-item p {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     text-transform: uppercase;
     list-style: none;
+    font-size: 120%;
+    margin-top: 2%;
 }
 /* #slide li {display: none;} */
 
@@ -63,56 +70,176 @@ header {
 
 }
 .container_logo a img {
-    height: 100%;
     width: 50%;
+    height: 100%;
     display: flex;
 }
     
 
 /* configuraçoes do h1 game mania */
-.container_head h1{
-    justify-self: center;
+.header_titulo{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header_titulo h1{
     font-family: 'Press Start 2P', cursive;
+    font-size: 300%;
+    color: black;
 }
 
 /* configurações dos icones do heder  */
 #container_navegador { display: none;}
 
 .container_icones {
-    height: 100%;
     width: 15%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
-.container_icones a img{ width: 70%; }
-
-/* configurações da barra de navegação */
-.barra_navegacao{
-    height: 34%;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-}
-.navbar-expand-lg {
     height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
-.collapse{ background-color: white;}
+.container_icones a img{ width: 150%;}
 
-/* configurações texto navbar  */
-.navbar{
-    text-transform: uppercase;
+
+/* menus  */
+
+mat-toolbar {
+    width: 95%;
+    height: 34%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    /* border: solid 2px red; */
+}
+
+mat-toolbar-row{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* configuraçoes do textos  */
+.mat-toolbar-row a {
     font-family: 'Roboto', sans-serif;
-    font-size: 80%;
     color: #353535;
+    font-size: 90%;
+    text-transform: uppercase;
 }
 
-/* fim do header  */
+/* configurações botao suporte  */
+.mat-button {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding: 0;
+}
+
+
+/* mat-icon {display: none;} */
+
+.procura_site {
+    width: 35%;
+    height: 50%;
+    justify-content: flex-end;
+}
+
+.me-2 { width: 70%;}
+
+.mat-menu-item a {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 90%;
+    color: black;
+}
+
+/*
+fim do header 
+
+e incio da configuração do menu de barras dentro do header
+
+*/
+
+
+/* configuração menu de barras  */
+.menu_barras { display: none;}
+
+.offcanvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d1f;
+}
+
+.offcanvas-header {
+    height: 10%;
+    width: 90%;
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    flex-direction: row;
+}
+
+.offcanvas-body {
+    height: 80%;
+    width: 90%;
+}
+
+mat-expansion-panel{ margin-top: 3%;}
+mat-panel-title { font-size: large; text-align: center;}
+
+.menu_categorias {
+    height: 200px;
+    display: flex;
+
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+.menu_categorias a {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: large;
+    
+}
+
+.procura_menu{
+    margin-top: 30px;
+    width: 100%;
+    height: 30px;
+}
+
+.procura_menu .me-2 { width: 80%;} 
+/* .offcanvas-body hr {color: white} */
+
+/* 
+fim da configuração do menu de barras 
+
+e 
+inicio dos medias querys 
+*/
+
+
+
+
+@media (max-width: 1200px) {
+    .mat-toolbar-row { width: 60%;}
+    .mat-toolbar-row a { font-size: 90%;}
+    .mat-button { font-size: 95%;}    
+}
 
 
 @media (max-width: 1100px) {
+    .mat-toolbar-row a { font-size: 90%; }
+    .mat-button { font-size: 90%;} 
     .produto_item { gap: 50px;}
     .cabecalho_rodape { display: flex; flex-direction: column; align-items: center; justify-content: space-around;}
     .siga { justify-content: center;}
@@ -131,41 +258,39 @@ header {
 
 @media (max-width: 1000px) {
 
-  header  {
+ header  {
     height: 90px;
     display: flex;
     align-items: center;
   }
 
   .tipbar { height: 25px; }
-
   .container_head { height: 74px; }
-
   .container_logo a img { width: 40%;}
-  
-
-    .container_head H1 { font-size: 30px; }
-    .container_icones { display: none;}
+  .container_head H1 { font-size: 30px; }
+  .container_icones {display: none;}
+  mat-toolbar {display: none;}
+  .menu_barras{display: block;}
     
-    .banner_1 {display: block;}
+  .banner_1 {display: block;}
 
-    #container_navegador {
+  #container_navegador {
       display: block;
       z-index: 1000;
       align-items: flex-end;
-      /* background-color: blue; */
     }
 
-    .navbar-light .navbar-toggler-icon{
+.navbar-light .navbar-toggler-icon{
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
      }
 
-    .barra_navegacao{ display: none;}
+.barra_navegacao{ display: none;}
     
 }
 
 
 @media (max-width: 900px) {
+    .container_icones { display: none;}
 	.busca {width: 250px;}
     .produto_item { gap: 40px;}
     #game_mania {width: 100%; height: 800px;}
@@ -189,6 +314,7 @@ header {
 @media screen and (max-width: 700px) {
   .container_logo a img { width: 60%;}
     .carousel-item img { width: 100%; height: 400px;}
+    .container_icones { display: none;}
     .banner_1 {width: 100%;}
     .banner_2 {display: none;}
     .carousel-caption button {display: block;}
@@ -209,6 +335,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
+    .offcanvas { width: 100%; }
     .carousel-inner {display: none;}
     .menu_diversos {width: 100%; height: 500px;}
     .produto_item { display: flex; flex-direction: column; align-items: center; gap: 40px;}
