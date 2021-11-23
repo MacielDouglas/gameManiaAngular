@@ -16,6 +16,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ProdutosComponent } from './views/produtos/produtos.component';
+import { Play5Component } from './views/play5/play5.component';
+import { NovoClienteComponent } from './clientes/novo-cliente/novo-cliente.component';
 
 
 
@@ -24,7 +27,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ProdutosComponent,
+    Play5Component,
+    NovoClienteComponent
   ],
   imports: [
     BrowserModule,

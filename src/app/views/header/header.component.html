@@ -22,7 +22,41 @@
     <h1>GAME MANIA</h1>
   </span>
   <nav class="container_icones">
-    <a href="#"><img src="assets/img/account_circle_black_24dp.svg" alt="area de login do cliente"></a>
+    <div id="login" class="login"> 
+  <!-- area de login do usuario -->
+      <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><img src="assets/img/account_circle_black_24dp.svg" alt="area de login do cliente" ></a>
+    
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <span type="button" class="material-icons" data-bs-dismiss="offcanvas" aria-label="Close">close</span>
+      </div>
+      <div class="offcanvas-body">
+        <h2>bem vindo ao <b>game mania</b></h2>
+        <p>faça o seu login e aproveite</p>
+        <form>
+          <div class="mb-3">
+           
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div id="emailHelp" class="form-text">Nós não compartilhamos suas informções.</div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn" mat-raised-button color="primary">Entrar</button>
+         </form>
+        <span>
+          <p>ainda não está registrado</p>
+          <a href="novo"><p>registra-se aqui</p></a>
+        </span>
+      
+
+      </div>
+     
+    
+    </div>
+      </div>
     <a href="#"><img src="assets/img/feedback_black_24dp.svg" alt="cental de atendimento ao cliente"></a>
     <a href="#"><img src="assets/img/shopping_cart_black_24dp.svg" alt="sacola de compras"></a>
   </nav>
@@ -34,7 +68,6 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
       <h1 id="offcanvasRightLabel">MENU</h1>
-      <!-- <button type="button" class="btn-close btn-close-white" aria-label="Close"></button> -->
       <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -43,7 +76,26 @@
       <mat-expansion-panel hideToggle >
         <mat-expansion-panel-header>
           LOGIN
-        </mat-expansion-panel-header>      
+        </mat-expansion-panel-header>
+        <h2>Bem vindo a <b>GAME MANIA</b></h2>
+        <p>Faça o seu login e aproveite</p>
+        <form>
+          <div class="mb-3">
+           
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div id="emailHelp" class="form-text">Nós não compartilhamos suas informções.</div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn" mat-raised-button color="primary">Entrar</button>
+         </form>
+        <span>
+          <p>ainda não está registrado</p>
+          <a href="novo"><p>registra-se aqui</p></a>
+        </span>
       </mat-expansion-panel>
  <hr>
       <mat-expansion-panel hideToggle >
@@ -55,7 +107,7 @@
         <div class="menu_categorias">
           <a href="#">games</a>
           <hr>
-          <a href="#">consoles</a><hr>
+          <a href="consoles">consoles</a><hr>
           <a href="#">informática</a><hr>
           <a href="#">smartphones</a><hr>
         </div>
@@ -95,7 +147,7 @@
 <mat-toolbar>
     <mat-toolbar-row>
       <a href="#">lançamentos</a>
-      <a href="#">produtos</a>
+      <a href="produtos">produtos</a>
       <a href="#">games</a>
       <a href="#">#game_mania</a>
       <button mat-button [matMenuTriggerFor]="menu">suporte</button>
@@ -110,7 +162,7 @@
     <div class="procura_site">
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="   Tente 'playstation'" aria-label="Search">
-        <button class="btn btn-dark btn-lg" type="submit">Buscar</button>
+        <button type="submit" mat-raised-button>Buscar</button>
       </form>
 
     </div>
@@ -119,6 +171,3 @@
 </mat-toolbar>
 
 </header>
-
-
-
