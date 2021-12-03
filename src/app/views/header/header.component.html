@@ -21,8 +21,10 @@
   <span class="header_titulo">
     <h1>GAME MANIA</h1>
   </span>
+  <!-- icones do header  -->
   <nav class="container_icones">
     <div id="login" class="login"> 
+      
   <!-- area de login do usuario -->
       <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><img src="assets/img/account_circle_black_24dp.svg" alt="area de login do cliente" ></a>
     
@@ -31,27 +33,76 @@
         <span type="button" class="material-icons" data-bs-dismiss="offcanvas" aria-label="Close">close</span>
       </div>
       <div class="offcanvas-body">
-        <h2>bem vindo ao <b>game mania</b></h2>
-        <p>faça o seu login e aproveite</p>
-        <form>
-          <div class="mb-3">
-           
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div id="emailHelp" class="form-text">Nós não compartilhamos suas informções.</div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <button type="submit" class="btn" mat-raised-button color="primary">Entrar</button>
-         </form>
-        <span>
-          <p>ainda não está registrado</p>
-          <a href="novo"><p>registra-se aqui</p></a>
-        </span>
-      
 
+        <div class="login-page">
+          <mat-card class="mat-elevation-z12">
+            <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
+            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+              <mat-tab label="Login">
+                  <mat-card-content>
+                    <form action="">
+                      <mat-form-field>
+                        <input matInput placeholder="Email" required name="email"ngModel #email="ngModel">
+                          <mat-error *ngIf="email.invalid">Email necessário</mat-error>
+                        <mat-icon matSuffix>email</mat-icon>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                          <mat-error *ngIf="password.errors && password.errors"> <!-- required-->
+                            Senha necessária
+                          </mat-error>
+                           <!-- .minlength -->
+                           <mat-error *ngIf="password.errors && password.errors">
+                            A senha dever minimo 6 caracteres
+                          </mat-error>
+                        <mat-icon matSuffix>lock</mat-icon>
+                      </mat-form-field>
+                      <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
+                      <button mat-raised-button color="primary" class="login-button">Entrar</button>
+        
+                      <button mat-raised-button class="login-button">Login com Google</button>
+                      <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
+                    </form>
+                  </mat-card-content>
+              </mat-tab>
+              <mat-tab label="Cadastre-se">
+                <mat-card-content>
+                  <form action="">
+                    <mat-form-field>
+                      <input matInput placeholder="Seu NOme" required name="username" ngModel #username="ngModel">
+                      <mat-icon matSuffix>perm_identity</mat-icon>
+                      <mat-error *ngIf="username.invalid">Nome inválido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+                        <mat-error *ngIf="email.invalid">Email é necessário</mat-error>
+                      <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                        <mat-error *ngIf="password.errors && password.errors"> <!-- .required -->
+                          A Senha é necessária
+                        </mat-error>
+                        <mat-error *ngIf="password.errors && password.errors"> <!-- .minlength -->
+                          A senha dever minimo 6 caracteres
+                        </mat-error>
+                      <mat-icon matSuffix>lock</mat-icon>
+        
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Confirme senha" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
+                        <mat-error *ngIf="repassword.errors && repassword.errors">  <!--.required  -->
+                          Confirmação de senha necessário
+                        </mat-error>
+                      <mat-icon matSuffix>lock</mat-icon>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
+                  </form>
+                </mat-card-content>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-card>
+        </div>        
       </div>
      
     
@@ -74,28 +125,76 @@
       <hr>
       
       <mat-expansion-panel hideToggle >
-        <mat-expansion-panel-header>
-          LOGIN
-        </mat-expansion-panel-header>
-        <h2>Bem vindo a <b>GAME MANIA</b></h2>
-        <p>Faça o seu login e aproveite</p>
-        <form>
-          <div class="mb-3">
-           
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div id="emailHelp" class="form-text">Nós não compartilhamos suas informções.</div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <button type="submit" class="btn" mat-raised-button color="primary">Entrar</button>
-         </form>
-        <span>
-          <p>ainda não está registrado</p>
-          <a href="novo"><p>registra-se aqui</p></a>
-        </span>
+        <mat-expansion-panel-header>LOGIN</mat-expansion-panel-header>
+        <div class="login-page">
+          <mat-card class="mat-elevation-z12 submenu_mobile">
+            <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
+            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+              <mat-tab label="Login">
+                  <mat-card-content>
+                    <form action="">
+                      <mat-form-field>
+                        <input matInput placeholder="Email" required name="email"ngModel #email="ngModel">
+                          <mat-error *ngIf="email.invalid">Email necessário</mat-error>
+                        <mat-icon matSuffix>email</mat-icon>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                          <mat-error *ngIf="password.errors && password.errors"> <!-- required-->
+                            Senha necessária
+                          </mat-error>
+                           <!-- .minlength -->
+                           <mat-error *ngIf="password.errors && password.errors">
+                            A senha dever minimo 6 caracteres
+                          </mat-error>
+                        <mat-icon matSuffix>lock</mat-icon>
+                      </mat-form-field>
+                      <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
+                      <button mat-raised-button color="primary" class="login-button">Entrar</button>
+        
+                      <button mat-raised-button class="login-button">Login com Google</button>
+                      <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
+                    </form>
+                  </mat-card-content>
+              </mat-tab>
+              <mat-tab label="Cadastre-se">
+                <mat-card-content>
+                  <form action="">
+                    <mat-form-field>
+                      <input matInput placeholder="Seu NOme" required name="username" ngModel #username="ngModel">
+                      <mat-icon matSuffix>perm_identity</mat-icon>
+                      <mat-error *ngIf="username.invalid">Nome inválido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+                        <mat-error *ngIf="email.invalid">Email é necessário</mat-error>
+                      <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                        <mat-error *ngIf="password.errors && password.errors"> <!-- .required -->
+                          A Senha é necessária
+                        </mat-error>
+                        <mat-error *ngIf="password.errors && password.errors"> <!-- .minlength -->
+                          A senha dever minimo 6 caracteres
+                        </mat-error>
+                      <mat-icon matSuffix>lock</mat-icon>
+        
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Confirme senha" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
+                        <mat-error *ngIf="repassword.errors && repassword.errors">  <!--.required  -->
+                          Confirmação de senha necessário
+                        </mat-error>
+                      <mat-icon matSuffix>lock</mat-icon>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
+                  </form>
+                </mat-card-content>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-card>
+        </div>
       </mat-expansion-panel>
  <hr>
       <mat-expansion-panel hideToggle >
@@ -146,10 +245,10 @@
 
 <mat-toolbar>
     <mat-toolbar-row>
-      <a href="#">lançamentos</a>
+      <a href="produtos#lançamentos">lançamentos</a>
       <a href="produtos">produtos</a>
       <a href="#">games</a>
-      <a href="#">#game_mania</a>
+      <a href="home#game_mania">#game_mania</a>
       <button mat-button [matMenuTriggerFor]="menu">suporte</button>
       <mat-menu #menu="matMenu">
        <button mat-menu-item><a href="#">fale conosco</a></button>

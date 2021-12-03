@@ -46,7 +46,7 @@ header {
     text-transform: uppercase;
     list-style: none;
     font-size: 120%;
-    margin-top: 2%;
+    margin-bottom: 0px;
 }
 /* #slide li {display: none;} */
 
@@ -83,13 +83,15 @@ header {
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
+
 .header_titulo h1{
     font-family: 'Press Start 2P', cursive;
     font-size: 300%;
     color: black;
+    margin-bottom: 0px;
 }
 
 /* configurações dos icones do heder  */
@@ -119,8 +121,8 @@ header {
 }
 
 #login .offcanvas-body {
-    padding: 50px;
-    width: 50%;
+    /* padding: 20px; */
+    width: 40%;
     background-color: rgb(29,29,31);
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -130,6 +132,46 @@ header {
     flex-direction: column;
     justify-content: space-between;
 }
+/* kaçjskjaf ~çjafçã  */
+
+
+.login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  mat-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  mat-form-field, mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+/* lklk  */
+
 
 #login .mb-3 {
     display: flex;
@@ -140,6 +182,7 @@ header {
 
 
 /* menus  */
+/* <!-- barra de navegação nav bar  --> */
 
 mat-toolbar {
     width: 95%;
@@ -149,7 +192,6 @@ mat-toolbar {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    /* border: solid 2px red; */
 }
 
 mat-toolbar-row{
@@ -235,6 +277,10 @@ e incio da configuração do menu de barras dentro do header
 
 mat-expansion-panel{ margin-top: 3%;}
 mat-panel-title { font-size: large; text-align: center;}
+
+.submenu_mobile { padding: 0;}
+
+
 
 .menu_categorias {
     height: 200px;
