@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/model/user';
 
 
 @Component({
@@ -15,4 +16,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  userModel = new User("", "", "")
+
+  onSubmit() {
+    console.log(this.userModel)
+  }
+
 }
+
+

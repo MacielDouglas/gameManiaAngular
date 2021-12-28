@@ -1,249 +1,135 @@
- <!-- slide com condiçoes de pagamento e frete  -->
+<!-- slide com condiçoes de pagamento e frete  -->
 <header>
-<div class="tipbar">
-  <div class="carousel" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <p>frete grátis acima de R$299,99</p>
-       </div>
-       <div class="carousel-item">
-        <p>parcelamos em até 12x</p>
-       </div>     
+  <div class="tipbar">
+    <div class="carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>frete grátis acima de R$299,99</p>
+        </div>
+        <div class="carousel-item">
+          <p>parcelamos em até 12x</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- fim do slide  -->
-<div class="container_head">
-  <span class="container_logo">
-    <a routerlink=""><img src="assets/img/LogoGameMania.svg" alt="logo do site game mania"></a>
-  </span>
-  <span class="header_titulo">
-    <h1>GAME MANIA</h1>
-  </span>
-  <!-- icones do header  -->
-  <nav class="container_icones">
-    <div id="login" class="login"> 
-      
-  <!-- area de login do usuario -->
-      <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><img src="assets/img/account_circle_black_24dp.svg" alt="area de login do cliente" ></a>
-    
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-      <div class="offcanvas-header">
-        <span type="button" class="material-icons" data-bs-dismiss="offcanvas" aria-label="Close">close</span>
-      </div>
-      <div class="offcanvas-body">
+  <!-- fim do slide  -->
+  <div class="container_head">
+    <span class="container_logo">
+      <a href="/"><img src="assets/img/LogoGameMania.svg" alt="logo do site game mania"></a>
+    </span>
+    <span class="header_titulo">
+      <h1>GAME MANIA</h1>
+    </span>
+    <!-- icones do header  -->
+    <nav class="container_icones">
+      <div id="login" class="login">
 
-        <div class="login-page">
-          <mat-card class="mat-elevation-z12">
-            <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
-            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
-              <mat-tab label="Login">
-                  <mat-card-content>
-                    <form action="">
-                      <mat-form-field>
-                        <input matInput placeholder="Email" required name="email"ngModel #email="ngModel">
-                          <mat-error *ngIf="email.invalid">Email necessário</mat-error>
-                        <mat-icon matSuffix>email</mat-icon>
-                      </mat-form-field>
-                      <mat-form-field>
-                        <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
-                          <mat-error *ngIf="password.errors && password.errors"> <!-- required-->
-                            Senha necessária
-                          </mat-error>
-                           <!-- .minlength -->
-                           <mat-error *ngIf="password.errors && password.errors">
-                            A senha dever minimo 6 caracteres
-                          </mat-error>
-                        <mat-icon matSuffix>lock</mat-icon>
-                      </mat-form-field>
-                      <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
-                      <button mat-raised-button color="primary" class="login-button">Entrar</button>
-        
-                      <button mat-raised-button class="login-button">Login com Google</button>
-                      <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
-                    </form>
-                  </mat-card-content>
-              </mat-tab>
-              <mat-tab label="Cadastre-se">
-                <mat-card-content>
-                  <form action="">
-                    <mat-form-field>
-                      <input matInput placeholder="Seu NOme" required name="username" ngModel #username="ngModel">
-                      <mat-icon matSuffix>perm_identity</mat-icon>
-                      <mat-error *ngIf="username.invalid">Nome inválido</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
-                        <mat-error *ngIf="email.invalid">Email é necessário</mat-error>
-                      <mat-icon matSuffix>email</mat-icon>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
-                        <mat-error *ngIf="password.errors && password.errors"> <!-- .required -->
-                          A Senha é necessária
-                        </mat-error>
-                        <mat-error *ngIf="password.errors && password.errors"> <!-- .minlength -->
-                          A senha dever minimo 6 caracteres
-                        </mat-error>
-                      <mat-icon matSuffix>lock</mat-icon>
-        
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput placeholder="Confirme senha" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
-                        <mat-error *ngIf="repassword.errors && repassword.errors">  <!--.required  -->
-                          Confirmação de senha necessário
-                        </mat-error>
-                      <mat-icon matSuffix>lock</mat-icon>
-                    </mat-form-field>
-                    <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
-                  </form>
-                </mat-card-content>
-              </mat-tab>
-            </mat-tab-group>
-          </mat-card>
-        </div>        
-      </div>
-     
-    
-    </div>
-      </div>
-    <a href="#"><img src="assets/img/feedback_black_24dp.svg" alt="cental de atendimento ao cliente"></a>
-    <a href="#"><img src="assets/img/shopping_cart_black_24dp.svg" alt="sacola de compras"></a>
-  </nav>
+        <!-- area de login do usuario -->
+        <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><img
+            src="assets/img/account_circle_black_24dp.svg" alt="area de login do cliente"></a>
 
-  <div class="menu_barras">
-    <button mat-icon-button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-      <h1 id="offcanvasRightLabel">MENU</h1>
-      <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <hr>
-      
-      <mat-expansion-panel hideToggle >
-        <mat-expansion-panel-header>LOGIN</mat-expansion-panel-header>
-        <div class="login-page">
-          <mat-card class="mat-elevation-z12 submenu_mobile">
-            <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
-            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
-              <mat-tab label="Login">
-                  <mat-card-content>
-                    <form action="">
-                      <mat-form-field>
-                        <input matInput placeholder="Email" required name="email"ngModel #email="ngModel">
-                          <mat-error *ngIf="email.invalid">Email necessário</mat-error>
-                        <mat-icon matSuffix>email</mat-icon>
-                      </mat-form-field>
-                      <mat-form-field>
-                        <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
-                          <mat-error *ngIf="password.errors && password.errors"> <!-- required-->
-                            Senha necessária
-                          </mat-error>
-                           <!-- .minlength -->
-                           <mat-error *ngIf="password.errors && password.errors">
-                            A senha dever minimo 6 caracteres
-                          </mat-error>
-                        <mat-icon matSuffix>lock</mat-icon>
-                      </mat-form-field>
-                      <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
-                      <button mat-raised-button color="primary" class="login-button">Entrar</button>
-        
-                      <button mat-raised-button class="login-button">Login com Google</button>
-                      <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
-                    </form>
-                  </mat-card-content>
-              </mat-tab>
-              <mat-tab label="Cadastre-se">
-                <mat-card-content>
-                  <form action="">
-                    <mat-form-field>
-                      <input matInput placeholder="Seu NOme" required name="username" ngModel #username="ngModel">
-                      <mat-icon matSuffix>perm_identity</mat-icon>
-                      <mat-error *ngIf="username.invalid">Nome inválido</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
-                        <mat-error *ngIf="email.invalid">Email é necessário</mat-error>
-                      <mat-icon matSuffix>email</mat-icon>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel #password="ngModel">
-                        <mat-error *ngIf="password.errors && password.errors"> <!-- .required -->
-                          A Senha é necessária
-                        </mat-error>
-                        <mat-error *ngIf="password.errors && password.errors"> <!-- .minlength -->
-                          A senha dever minimo 6 caracteres
-                        </mat-error>
-                      <mat-icon matSuffix>lock</mat-icon>
-        
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput placeholder="Confirme senha" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
-                        <mat-error *ngIf="repassword.errors && repassword.errors">  <!--.required  -->
-                          Confirmação de senha necessário
-                        </mat-error>
-                      <mat-icon matSuffix>lock</mat-icon>
-                    </mat-form-field>
-                    <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
-                  </form>
-                </mat-card-content>
-              </mat-tab>
-            </mat-tab-group>
-          </mat-card>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+          <div class="offcanvas-header">
+            <span type="button" class="material-icons" data-bs-dismiss="offcanvas" aria-label="Close">close</span>
+          </div>
+          <div class="offcanvas-body">
+
+            <div class="login-page">
+              <mat-card class="mat-elevation-z12">
+                <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
+                <app-novo-cliente></app-novo-cliente>
+                <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+               
+              </mat-tab-group> -->
+              </mat-card>
+            </div>
+          </div>
+
+
         </div>
-      </mat-expansion-panel>
- <hr>
-      <mat-expansion-panel hideToggle >
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            categorias
-          </mat-panel-title>
-        </mat-expansion-panel-header >
-        <div class="menu_categorias">
-          <a href="#">games</a>
+      </div>
+      <a href="#"><img src="assets/img/feedback_black_24dp.svg" alt="cental de atendimento ao cliente"></a>
+      <a href="#"><img src="assets/img/shopping_cart_black_24dp.svg" alt="sacola de compras"></a>
+    </nav>
+
+    <div class="menu_barras">
+      <button mat-icon-button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h1 id="offcanvasRightLabel">MENU</h1>
+          <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
           <hr>
-          <a href="consoles">consoles</a><hr>
-          <a href="#">informática</a><hr>
-          <a href="#">smartphones</a><hr>
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>LOGIN</mat-expansion-panel-header>
+            <div class="login-page">
+              <mat-card class="mat-elevation-z12 submenu_mobile">
+                <mat-card-title style="text-align:center;">Bem Vindo a GAMEMANIA</mat-card-title>
+                <app-novo-cliente></app-novo-cliente>
+
+              </mat-card>
+            </div>
+          </mat-expansion-panel>
+          <hr>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                categorias
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="menu_categorias">
+              <a href="#">games</a>
+              <hr>
+              <a href="consoles">consoles</a>
+              <hr>
+              <a href="#">informática</a>
+              <hr>
+              <a href="#">smartphones</a>
+              <hr>
+            </div>
+          </mat-expansion-panel>
+          <hr>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                SUPORTE
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="menu_categorias">
+              <a href="#">fale conosco</a>
+              <a href="#">reclamações</a>
+              <hr>
+              <a href="#">nossa loja</a>
+              <hr>
+            </div>
+          </mat-expansion-panel>
+          <hr>
+          <div class="procura_menu">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="   Tente 'playstation'" aria-label="Search">
+              <button class="btn btn-dark btn-lg" type="submit">Buscar</button>
+            </form>
+
+          </div>
         </div>
-      </mat-expansion-panel>
-<hr>
-  <mat-expansion-panel hideToggle >
-    <mat-expansion-panel-header>
-    <mat-panel-title>
-      SUPORTE
-    </mat-panel-title>
-  </mat-expansion-panel-header >
-  <div class="menu_categorias">
-    <a href="#">fale conosco</a>
-    <a href="#">reclamações</a><hr>
-    <a href="#">nossa loja</a><hr>
-  </div>
-  </mat-expansion-panel>  
-<hr>
-<div class="procura_menu">
-  <form class="d-flex">
-    <input class="form-control me-2" type="search" placeholder="   Tente 'playstation'" aria-label="Search">
-    <button class="btn btn-dark btn-lg" type="submit">Buscar</button>
-  </form>
+      </div>
 
-</div>
     </div>
-</div>
-        
+
+
   </div>
 
 
-</div>
+  <!-- barra de navegação nav bar  -->
 
-
-<!-- barra de navegação nav bar  -->
-
-<mat-toolbar>
+  <mat-toolbar>
     <mat-toolbar-row>
       <a href="produtos#lançamentos">lançamentos</a>
       <a href="produtos">produtos</a>
@@ -251,10 +137,10 @@
       <a href="home#game_mania">#game_mania</a>
       <button mat-button [matMenuTriggerFor]="menu">suporte</button>
       <mat-menu #menu="matMenu">
-       <button mat-menu-item><a href="#">fale conosco</a></button>
-       <button mat-menu-item><a href="#">reclamações</a></button>
-       <hr>
-       <button mat-menu-item><a href="#">nossa loja</a></button>
+        <button mat-menu-item><a href="#">fale conosco</a></button>
+        <button mat-menu-item><a href="#">reclamações</a></button>
+        <hr>
+        <button mat-menu-item><a href="#">nossa loja</a></button>
       </mat-menu>
     </mat-toolbar-row>
 
@@ -266,7 +152,7 @@
 
     </div>
 
-   
-</mat-toolbar>
+
+  </mat-toolbar>
 
 </header>

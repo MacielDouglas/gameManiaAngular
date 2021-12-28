@@ -1,49 +1,70 @@
+<mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+    <mat-tab label="Login">
+        <mat-card-content>
+            <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+                <mat-form-field>
+                    <input matInput placeholder="Email" required name="email" [(ngModel)]="userModel.email">
+                    <!-- <mat-error *ngIf="email.invalid">Email necessário</mat-error> -->
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Senha" type="password" required minlength="6" name="password"
+                        [(ngModel)]="userModel.email">
+                    <mat-error *ngIf="password.errors && password.errors" .required>
+                        Senha necessária
+                    </mat-error>
+                    <!-- .minlength -->
+                    <mat-error *ngIf="password.errors && password.errors">
+                        A senha dever minimo 6 caracteres
+                    </mat-error>
+                    <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+                <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
+                <button mat-raised-button color="primary" class="login-button">Entrar</button>
 
-<div class="mb-4">
-    <h1 class="h2 border-left pl-2 text-white bg-dark">
-        Cadastro de Novo Cliente
-    </h1>
-</div>
+                <button mat-raised-button class="login-button">Login com Google</button>
+                <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
+            </form>
+        </mat-card-content>
+    </mat-tab>
+    <mat-tab label="Cadastre-se">
+        <mat-card-content>
+            <form action="">
+                <mat-form-field>
+                    <input matInput placeholder="Seu NOme" required name="username" ngModel #username="ngModel">
+                    <mat-icon matSuffix>perm_identity</mat-icon>
+                    <mat-error *ngIf="username.invalid">Nome inválido</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+                    <mat-error *ngIf="email.invalid">Email é necessário</mat-error>
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Senha" type="password" required minlength="6" name="password" ngModel
+                        #password="ngModel">
+                    <mat-error *ngIf="password.errors && password.errors">
+                        <!-- .required -->
+                        A Senha é necessária
+                    </mat-error>
+                    <mat-error *ngIf="password.errors && password.errors">
+                        <!-- .minlength -->
+                        A senha dever minimo 6 caracteres
+                    </mat-error>
+                    <mat-icon matSuffix>lock</mat-icon>
 
-<form class="text-white bg-primary">
-    <div class="card">
-        Informações sobre o cliente
-    </div>
-    <div class="card-body">
-        <div class="form-row">
-            <div class="form-group col-md-6 text-white bg-dark">
-                <label for="name">Nome</label>
-                <input type="text" id="nome" class= "form-control">
-            </div>
-
-            <div class="form-group col-md-7">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" class="form-control">
-            </div>
-
-            <div class="form-group col-md-2">
-                <label for="bornDate">Data de Nascimento</label>
-                <input type="date" id="bornDate" class="form-control">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label for="phoneNumber">Telefone</label>
-                <input type="tel" id="phoneNumber" class="form-control">
-            </div>            
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-end mt-2">
-        <button type="submit" class="btn btn-sucess mr-2">Salvar</button>
-        <a href="/" class="btn btn-danger btn-small">Cancelar</a>
-    </div>
-
-</form>
-
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Confirme senha" type="password" required minlength="6"
+                        name="repassword" ngModel #repassword="ngModel">
+                    <mat-error *ngIf="repassword.errors && repassword.errors">
+                        <!--.required  -->
+                        Confirmação de senha necessário
+                    </mat-error>
+                    <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+                <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
+            </form>
+        </mat-card-content>
+    </mat-tab>
+</mat-tab-group>
