@@ -129,8 +129,19 @@
 
   <!-- barra de navegação nav bar  -->
 
-  <mat-toolbar>
-    <mat-toolbar-row>
+  <mat-toolbar-row>
+    <a href="produtos#lançamentos">lançamentos</a>
+    <a href="produtos">produtos</a>
+    <a href="#">games</a>
+    <a href="home#game_mania">#game_mania</a>
+    <button mat-button [matMenuTriggerFor]="menu">suporte</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a href="#">fale conosco</a></button>
+      <button mat-menu-item><a href="#">reclamações</a></button>
+      <hr>
+      <button mat-menu-item><a href="#">nossa loja</a></button>
+    </mat-menu>
+    <!-- <mat-toolbar-row>
       <a href="produtos#lançamentos">lançamentos</a>
       <a href="produtos">produtos</a>
       <a href="#">games</a>
@@ -142,7 +153,7 @@
         <hr>
         <button mat-menu-item><a href="#">nossa loja</a></button>
       </mat-menu>
-    </mat-toolbar-row>
+    </mat-toolbar-row> -->
 
     <div class="procura_site">
       <form class="d-flex">
@@ -153,6 +164,6 @@
     </div>
 
 
-  </mat-toolbar>
+  </mat-toolbar-row>
 
 </header>

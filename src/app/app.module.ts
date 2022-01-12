@@ -12,6 +12,9 @@ import { Play5Component } from './views/play5/play5.component';
 import { NovoClienteComponent } from './clientes/novo-cliente/novo-cliente.component';
 
 import { MaterialModule } from './material/material.module';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './views/login/login.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
 
@@ -24,13 +27,16 @@ import { MaterialModule } from './material/material.module';
     FooterComponent,
     ProdutosComponent,
     Play5Component,
-    NovoClienteComponent
+    NovoClienteComponent,
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule
   
 
   ],

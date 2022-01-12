@@ -204,23 +204,23 @@ mat-card-content {
 /* menus  */
 /* <!-- barra de navegação nav bar  --> */
 
-mat-toolbar {
+mat-toolbar-row {
     width: 95%;
     height: 34%;
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     align-items: center;
     justify-content: space-between;
     background-color: white;
 }
 
-mat-toolbar-row {
+/* mat-toolbar-row {
     width: 50%;
     height: 100%;
     background-color: white;
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /* configuraçoes do textos  */
 .mat-toolbar-row a {
@@ -353,10 +353,7 @@ inicio dos medias querys
 
 
 @media (max-width: 1200px) {
-    .mat-toolbar-row {
-        width: 60%;
-    }
-
+ 
     .mat-toolbar-row a {
         font-size: 90%;
     }
@@ -469,7 +466,7 @@ inicio dos medias querys
         display: none;
     }
 
-    mat-toolbar {
+    .mat-toolbar-row {
         display: none;
     }
 

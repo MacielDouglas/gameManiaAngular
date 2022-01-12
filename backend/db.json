@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "email": "usuario@mail.com",
+      "password": "$2a$10$OJI5EdRZx9bLUkllmJvtKODCBk.6.fpYqi1Mf77nUEUCEIVQ7zKvK",
+      "id": 1
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "titulo": "Produto 1",
+      "descrição": "Essa é a descrição do produto 1"
+    },
+    {
+      "titulo": "Produto 2",
+      "descrição": "Essa é a descrição do Produto 2",
+      "id": 2
+    }
+  ]
+}
