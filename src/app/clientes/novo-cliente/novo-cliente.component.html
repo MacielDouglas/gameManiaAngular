@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-<mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
-    <mat-tab label="Login" >
-        <mat-card-content>
-            <form #userForm="ngForm" (ngSubmit)="onSubmit()">
-                <mat-form-field>
-                    <input matInput placeholder="Email" required name="email" [(ngModel)]="userModel.email">
-                    <!-- <mat-error *ngIf="email.invalid">Email necessário</mat-error> -->
-                    <mat-icon matSuffix>email</mat-icon>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Senha" type="password" required minlength="6" name="password"
-                        [(ngModel)]="userModel.email">
-                    <mat-error *ngIf="password.errors && password.errors" .required>
-                        Senha necessária
-                    </mat-error>
-                    <!-- .minlength -->
-                    <mat-error *ngIf="password.errors && password.errors">
-                        A senha dever minimo 6 caracteres
-                    </mat-error>
-                    <mat-icon matSuffix>lock</mat-icon>
-                </mat-form-field>
-                <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
-                <button mat-raised-button color="primary" class="login-button">Entrar</button>
-=======
->>>>>>> teste
 
 <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
     <mat-tab label="Login" >
