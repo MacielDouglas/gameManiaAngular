@@ -1,53 +1,42 @@
 
 <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
     <mat-tab label="Login" >
-        <mat-card-content>
-            <form #userForm="ngForm" (ngSubmit)="onSubmit()">
-                <mat-form-field>
-                    <input matInput placeholder="Email">
-                    <mat-icon matSuffix>email</mat-icon>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Senha">
-                    <mat-error>Senha necessária</mat-error>
-                 
-                    <mat-error>A senha dever minimo 6 caracteres</mat-error>
-                    <mat-icon matSuffix>lock</mat-icon>
-                </mat-form-field>
-                <mat-checkbox>lembre-se de mim neste dispositivo</mat-checkbox>
-                <button mat-raised-button color="primary" class="login-button">Entrar</button>
-            </form>
-            <button mat-raised-button class="login-button">Login com Google</button>
-            <button mat-raised-button class="login-button" color="primary">Login com Facebook</button>
-        </mat-card-content>
+        <app-login></app-login>
+    
     </mat-tab>
     <mat-tab label="Cadastre-se">
         <mat-card-content>
-            <form action="">
+            <form #cadastroForm="ngForm" (ngSubmit)="onSubmit()">
                 <mat-form-field>
-                    <input matInput placeholder="Seu Nome">
+                    <mat-label for="nome" >Seu Nome</mat-label>
+                    <input matInput placeholder="Escreva seu nome completo" type="text" id="nome" name="nome" [(ngModel)]="userModel.nome" required>
                     <mat-icon matSuffix>perm_identity</mat-icon>
                     <mat-error>Nome inválido</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Email">
-                    <mat-error>Email é necessário</mat-error>
+                    <mat-label for="email" >Email</mat-label>
+                    <input matInput placeholder="ex. fulano@mail.com" type="email" id="email" name="email" [(ngModel)]="userModel.email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                     <mat-icon matSuffix>email</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Senha">
+                    <mat-label for="senha">Senha</mat-label>
+                    <input matInput placeholder="use numeros e letras" type="password" id="senha" name="senha" [(ngModel)]="userModel.senha" required>
                     <mat-error>A Senha é necessária</mat-error>
                     <mat-error>A senha dever minimo 6 caracteres</mat-error>
                     <mat-icon matSuffix>lock</mat-icon>
 
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Confirme senha" type="password">
+                    <mat-label for="confSenha">Confirme sua senha</mat-label>
+                    <input matInput placeholder="As senhas devem ser iguais" type="password" id="confSenha" name="confSenha" ngModel>
                     <mat-error>Confirmação de senha necessário</mat-error>
                     <mat-icon matSuffix>lock</mat-icon>
                 </mat-form-field>
-                <button mat-raised-button color="primary" class="login-button">Cadastrar</button>
+                <button type="submit" mat-raised-button color="primary" class="login-button">Cadastre-se</button>
+              
             </form>
+           
         </mat-card-content>
     </mat-tab>
 </mat-tab-group>

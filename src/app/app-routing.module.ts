@@ -5,13 +5,16 @@ import { ConsolesComponent } from './views/consoles/consoles.component';
 import { ProdutosComponent } from './views/produtos/produtos.component';
 import { Play5Component } from './views/play5/play5.component';
 import { NovoClienteComponent } from './clientes/novo-cliente/novo-cliente.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent},
   {path:"consoles", component: ConsolesComponent},
   {path:"produtos", component: ProdutosComponent},
   {path:"playstation5", component: Play5Component},
-  {path:"novo", component:NovoClienteComponent}
+  {path:"novo", component:NovoClienteComponent},
+  {path:"404", component:NotFoundComponent},
+  {path:"**", redirectTo:"404"}
 ];
 
 @NgModule({
