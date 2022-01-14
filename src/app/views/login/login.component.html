@@ -2,12 +2,12 @@
     <form  #loginForm="ngForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label for="email" >Email</mat-label>
-            <input matInput type="email" name="email" id="email" placeholder="Email" [(ngModel)]="loginModel.email" required>
+            <input matInput type="email" name="email" placeholder="Email" [(ngModel)]="loginModel.email" required>
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
         <mat-form-field>
             <mat-label for="senha" >Senha</mat-label>
-            <input matInput type="password" name="password" id="senha" placeholder="Senha" [(ngModel)]="loginModel.password" required>
+            <input matInput type="password" name="password" placeholder="Senha" [(ngModel)]="loginModel.password" required>
             <mat-error>Senha necessária</mat-error>
          
             <mat-error>A senha dever minimo 6 caracteres</mat-error>
