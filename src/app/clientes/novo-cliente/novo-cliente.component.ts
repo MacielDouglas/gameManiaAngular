@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/model/user';
 
 @Component({
@@ -13,12 +15,31 @@ export class NovoClienteComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
 
 
-
-  constructor() { }
+public cadastroForm !: FormGroup;
+  constructor(private formBuilder : FormBuilder, private httpClient : HttpClient, private router:Router) { }
 
   ngOnInit(): void {
+    this.cadastroForm = this.formBuilder.group({
+      nome:[''],
+      email:[''],
+      password:['']
+    })
   }
 
+  mensagem="";
+
+  cadastroEnvio(){
+    this.httpClient.post<any>("http://localhost:3000/users",this.cadastroForm.value)
+    .subscribe(res=>{
+      this.mensagem = "Cadastrado com sucesso!";
+      // alert("Cadastrado com sucesso!!!");
+      this.cadastroForm.reset();
+      this.router.navigate([""]);
+    },err=>{
+      alert("Parece que algo deu errado, necessario nome, email e senha.")
+    })
+
+  }
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -35,5 +56,5 @@ export class NovoClienteComponent implements OnInit {
   }
 
 
- 
+
 }

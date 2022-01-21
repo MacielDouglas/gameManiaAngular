@@ -2,26 +2,26 @@
 <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
     <mat-tab label="Login" >
         <app-login></app-login>
-    
+
     </mat-tab>
     <mat-tab label="Cadastre-se">
         <mat-card-content>
-            <form #cadastroForm="ngForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="cadastroForm" (ngSubmit)="cadastroEnvio()">
                 <mat-form-field>
                     <mat-label for="nome" >Seu Nome</mat-label>
-                    <input matInput placeholder="Escreva seu nome completo" type="text" id="nome" name="nome" [(ngModel)]="userModel.nome" required>
+                    <input matInput formControlName="nome" placeholder="Escreva seu nome completo" type="text" id="nome" name="nome" required>
                     <mat-icon matSuffix>perm_identity</mat-icon>
                     <mat-error>Nome inválido</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label for="email" >Email</mat-label>
-                    <input matInput placeholder="ex. fulano@mail.com" type="email" id="email" name="email" [(ngModel)]="userModel.email" required>
-                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    <input matInput formControlName="email" placeholder="ex. fulano@mail.com" type="email" id="email" name="email" required>
+                    <mat-error >Email necessario</mat-error>
                     <mat-icon matSuffix>email</mat-icon>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label for="senha">Senha</mat-label>
-                    <input matInput placeholder="use numeros e letras" type="password" id="senha" name="senha" [(ngModel)]="userModel.senha" required>
+                    <input matInput formControlName="password" placeholder="use numeros e letras" type="password" id="senha" name="senha" required>
                     <mat-error>A Senha é necessária</mat-error>
                     <mat-error>A senha dever minimo 6 caracteres</mat-error>
                     <mat-icon matSuffix>lock</mat-icon>
@@ -34,9 +34,10 @@
                     <mat-icon matSuffix>lock</mat-icon>
                 </mat-form-field>
                 <button type="submit" mat-raised-button color="primary" class="login-button">Cadastre-se</button>
-              
+                <mat-error *ngIf="mensagem != '' ">{{mensagem}}</mat-error>
+
             </form>
-           
+
         </mat-card-content>
     </mat-tab>
 </mat-tab-group>

@@ -7,7 +7,7 @@ import { Login } from '../model/login';
   providedIn: 'root'
 })
 export class LoginService {
-  url=" http://localhost:3000/login";
+  url="http://localhost:3000/login";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,5 +22,5 @@ export class LoginService {
 //     headers: new HttpHeaders({'Content-Type':'application/json'}),observe:'response'
 
 // }
-  
+
 }
