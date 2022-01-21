@@ -1,0 +1,74 @@
+<nav class="navbar navbar-light navbar bg-dark">
+  <div class="container-xxl">
+    <h1 style="color: white;">CRUD GameMania</h1>
+    <div class="d-flex">
+      <button (click)="clickEditarCadastro()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Adicionar Cliente</button>
+    </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Id Cliente</th>
+      <th scope="col">Nome Cliente</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Senha</th>
+      <th scope="col">Ações</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of cadastroData">
+      <td>{{row.id}}</td>
+      <td>{{row.nome}}</td>
+      <td>{{row.email}}</td>
+      <td>******</td>
+      <!-- <td>{{row.password}}</td> -->
+      <td>
+        <button (click)="editarCadastro(row)" style="color: aliceblue;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Editar</button>
+        <button (click)="deleteCadastro(row)" class="btn btn-danger mx-3">Deletar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detalhes cadastro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="cadastroForm">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nome Cliente</label>
+            <input type="text" formControlName="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email Cliente</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" *ngIf="showAdicionar" (click)="postCadastroDetalhes()" class="btn btn-primary">Adicionar Cliente</button>
+        <button type="button" *ngIf="showEditar" (click)="editarCadastroDetalhes()" class="btn btn-ligth">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>

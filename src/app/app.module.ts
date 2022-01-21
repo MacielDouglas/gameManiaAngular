@@ -15,6 +15,7 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './views/login/login.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { CadastroCrudComponent } from './clientes/cadastro-crud/cadastro-crud.component';
 
 
 
@@ -29,7 +30,8 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
     Play5Component,
     NovoClienteComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CadastroCrudComponent
   ],
   imports: [
     BrowserModule,

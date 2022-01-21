@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { CadastroCrudComponent } from './clientes/cadastro-crud/cadastro-crud.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { ConsolesComponent } from './views/consoles/consoles.component';
@@ -13,8 +14,10 @@ const routes: Routes = [
   {path:"produtos", component: ProdutosComponent},
   {path:"playstation5", component: Play5Component},
   {path:"novo", component:NovoClienteComponent},
+  {path:"crud", component:CadastroCrudComponent},
   {path:"404", component:NotFoundComponent},
   {path:"**", redirectTo:"404"}
+
 ];
 
 @NgModule({

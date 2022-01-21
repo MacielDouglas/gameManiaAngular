@@ -1,9 +1,22 @@
 {
   "users": [
     {
-      "email": "usuario@mail.com",
-      "password": "$2a$10$OJI5EdRZx9bLUkllmJvtKODCBk.6.fpYqi1Mf77nUEUCEIVQ7zKvK",
-      "id": 1
+      "id": 1,
+      "nome": "Fulano de tal",
+      "email": "fulano@email.com",
+      "password": "$2a$10$oO/wHwEW5irtSdgFlTGTdOpjQQ7ayMJBze2DHF1EHGjzZShhcr.0K"
+    },
+    {
+      "email": "siclano@mail.com",
+      "password": "$2a$10$v0xkchHypRkqLM8KowtmweEWbERAAep4r2juMIyfjoHEyYivF6HW2",
+      "id": 2,
+      "nome": "Siclano da Silva"
+    },
+    {
+      "email": "taldasilva@email.com.br",
+      "password": "$2a$10$Qpe0A4kdDhB1hg3Efr1/k.swJvO9qfma5gfK7PqvXOtBGS.d7AjV6",
+      "nome": "De Tal da Silva Pereira",
+      "id": 3
     }
   ],
   "produtos": [
