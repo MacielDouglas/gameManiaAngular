@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"produtos", component: ProdutosComponent},
   {path:"playstation5", component: Play5Component},
   {path:"novo", component:NovoClienteComponent},
-  {path:"crud", component:CadastroCrudComponent},
+  {path:"admin", component:CadastroCrudComponent},
   {path:"404", component:NotFoundComponent},
   {path:"**", redirectTo:"404"}
 

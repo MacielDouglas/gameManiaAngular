@@ -8,15 +8,15 @@
     },
     {
       "email": "siclano@mail.com",
-      "password": "$2a$10$v0xkchHypRkqLM8KowtmweEWbERAAep4r2juMIyfjoHEyYivF6HW2",
-      "id": 2,
-      "nome": "Siclano da Silva"
+      "password": "$2a$10$77cfsPto03jQRydL4b5rl.Y7CEY5.JPrVsuRG85hSHO7sz.na.YQK",
+      "nome": "Siclano da Silva",
+      "id": 2
     },
     {
-      "email": "taldasilva@email.com.br",
-      "password": "$2a$10$Qpe0A4kdDhB1hg3Efr1/k.swJvO9qfma5gfK7PqvXOtBGS.d7AjV6",
-      "nome": "De Tal da Silva Pereira",
-      "id": 3
+      "id": 3,
+      "nome": "Beltrano Pereira Silva de Souza",
+      "email": "beltrano@mail.com.br",
+      "password": "$2a$10$CyS.q6OoVQ0SGrqr/KXejewQoWOskwunx9XiXxJCxxHqzdVymOrMK"
     }
   ],
   "produtos": [
